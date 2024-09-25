@@ -1,0 +1,140 @@
+// .slider-container {
+//     position: relative;
+//     overflow: hidden;
+//     width: 100%; /* Ensure the slider takes the full width */
+   
+// }
+
+// .slider-wrapper {
+//     display: flex;
+//     transition: transform 0.5s ease-in-out;
+//     padding: 20px 0; /* Adjust vertical space */
+// }
+// .profile-image-container {
+//     display: flex;
+//     justify-content: center;
+//     margin: 20px 0;
+//   }
+// .profile-image {
+//     width: 200px;
+//     height: 250px;
+//     object-fit: cover;
+//     border-radius: 10px;
+//     margin-top: 44px;
+//   }
+  
+// .slider-item {
+//     max-width: 400px; /* Fixed width for the items */
+//     margin: 0 10px; /* Create gaps between images */
+//     border-radius: 20px;
+//     overflow: hidden;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+//     position: relative;
+//     background: linear-gradient(180deg, #b1b8b1 0%, #d0d6d1 100%);
+//     color: white;
+//     padding: 15px;
+//     flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+// }
+
+// .slider-controls {
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 10px;
+// }
+
+// .feedback-controls {
+//     display: flex; /* Use flexbox for button alignment */
+//     justify-content: center; /* Center the buttons */
+//     margin-top: 20px;
+// }
+
+// .feedback-controls button {
+//     margin: 0 10px; /* Add horizontal space between buttons */
+// }
+
+
+
+
+
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between; /* Align header elements to the ends */
+    align-items: center; /* Vertically align the title and icon */
+    margin-bottom: 10px;
+    margin-left: 135px;
+
+  }
+  
+  .pending-info {
+    display: flex;
+    justify-content: space-between; /* Align the text and badge */
+    align-items: center; /* Vertically align the text and badge */
+    margin-bottom: 20px;
+    margin-left: 124px;
+
+  }
+  
+  .pending-info p {
+    margin: 0;
+  }
+  
+  .badge {
+    background-color:gray; /* Badge color */
+    color: white; /* Text color */
+    padding: 4px 8px;
+    border-radius: 12px; /* Rounded corners */
+    font-size: 0.9em;
+    margin-right: 838px;
+
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 20px 0;
+  }
+  
+  .profile-image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .profile-image {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .slider-item {
+    max-width: 300px;
+    margin: 0 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  
+  .feedback-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .feedback-controls button {
+    margin: 0 10px;
+  }
+  
+  .slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  

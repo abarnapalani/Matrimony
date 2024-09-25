@@ -1,0 +1,38 @@
+<mat-card class="profile-card" *ngIf="currentProfile">
+  <button mat-icon-button class="more-options" (click)="onMenuClick()">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <button mat-icon-button class="back-btn" color="primary" (click)="prevProfile()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <div class="profile-image-container">
+    <img mat-card-image class="profile-image" [src]="currentProfile.src" alt="Profile Image">
+  </div>
+
+  <mat-card-content>
+    <div class="profile-details">
+      <span class="profile-name">{{ currentProfile.name }}</span><br>
+      <span class="profile-info">{{ currentProfile.details }}</span>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions class="card-actions">
+    <div class="fav-container">
+      <button mat-icon-button class="fav-icon" (click)="toggleFavorite(currentProfile)">
+        <mat-icon>{{ currentProfile.isFavorite ? 'favorite' : 'favorite_border' }}</mat-icon>
+      </button>
+      <span>shortList</span>
+    </div>
+    <p class="like-text">Like Her</p>
+    <div class="action-buttons">
+      <button mat-icon-button class="yes-button" (click)="onYesClick()">
+        <mat-icon>check</mat-icon>
+      </button>
+      <button mat-icon-button class="no-button" (click)="onNoClick()">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>

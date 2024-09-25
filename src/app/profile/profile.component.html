@@ -1,0 +1,16 @@
+<!-- src/app/profile/profile.component.html -->
+ <div class="slider-wrapper">
+  <mat-card *ngIf="profileDetails" class="slider-item">
+    <button mat-icon-button class="back-btn" color="primary" (click)="prevProfile()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <div class="profile-image-container">
+      <img mat-card-image class="profile-image" [src]="profileDetails.src" alt="Profile Image">
+    </div>
+    <h3>{{ profileDetails.name }}</h3>
+    <p>{{ profileDetails.details }}</p>
+   </mat-card>
+  
+ </div>
+
+  

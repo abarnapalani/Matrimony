@@ -1,0 +1,50 @@
+<div class="slider-container">
+  <!-- Header with a title and a menu icon -->
+  <div class="header">
+    <h3>My Matches</h3>
+    <mat-icon style="margin-right: 838px;" (click)="onMenuClick()">more_vert</mat-icon>
+  </div>
+
+  <!-- Pending profiles information -->
+  <div class="pending-info">
+    <p>8 profiles pending with me</p>
+    <span class="badge">5 New</span>
+  </div>
+
+  <!-- Slider with profile cards -->
+  <div class="slider-wrapper" [ngStyle]="{'transform': 'translateX(' + -currentSlideIndex * 100 + '%)'}">
+    <mat-card *ngFor="let image of profiles; let i = index" class="slider-item">
+      <!-- Profile image -->
+      <div class="profile-image-container">
+        <img mat-card-image class="profile-image" [src]="image.src" alt="Profile Image">
+      </div>
+
+      <!-- Profile name -->
+      <mat-card-title>
+        <h4 style="text-align: center;">{{ image.name }}</h4>
+      </mat-card-title>
+
+      <!-- Profile details -->
+      <mat-card-content>
+        <p style="text-align: center;">{{ image.details }}</p>
+      </mat-card-content>
+
+      <!-- Feedback buttons: Yes and No -->
+      <mat-card-actions class="feedback-controls" style="justify-content: space-around;">
+        <!-- Pass the specific profile's ID and name to the methods -->
+        <button mat-raised-button color="primary" (click)="like(image.id, image.name)">Yes</button>
+        <button mat-raised-button color="warn" (click)="onNoClick(image)">No</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Slider controls: Previous and Next -->
+<div class="slider-controls" style="text-align: center; margin-top: 20px;">
+  <button mat-icon-button (click)="prevSlide()" [disabled]="currentSlideIndex === 0">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <button mat-icon-button (click)="nextSlide()" [disabled]="currentSlideIndex === profiles.length - 1">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>

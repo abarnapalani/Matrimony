@@ -1,0 +1,71 @@
+.profile-card {
+  max-width: 400px;
+  margin: 20px auto; /* Center the card */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.3s ease;
+  opacity: 1; /* No fade-in since we are showing only one card */
+  height: 410px; /* Set a fixed height for the card */
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 52px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center the icons vertically */
+  padding: 0 16px; /* Add padding for better spacing */
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column; /* Stack name and details */
+  align-items: center; /* Center align items */
+}
+
+.more-options,
+.back-btn {
+  position: absolute;
+  top: 10px;
+}
+
+.more-options {
+  right: 10px;
+}
+
+.back-btn {
+  left: 10px;
+}
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center align items vertically */
+  padding: 0 16px; /* Add padding for better spacing */
+}
+
+.fav-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.like-text {
+  margin: 0 16px; /* Space around the "Like Her" text */
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center; /* Center vertically */
+}
